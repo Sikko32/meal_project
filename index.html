@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고잔고등학교 급식정보</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 고잔고등학교 급식정보</h1>
+            <p>오늘의 맛있는 급식을 확인하세요!</p>
+        </header>
+
+        <main>
+            <div class="date-selector">
+                <label for="meal-date">📅 날짜 선택:</label>
+                <input type="date" id="meal-date" name="meal-date">
+                <div class="button-group">
+                    <button id="today-btn" class="today-btn">🔥 오늘 급식</button>
+                    <button id="search-btn">🔍 급식정보 조회</button>
+                </div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <p>급식정보를 불러오는 중...</p>
+            </div>
+
+            <div id="meal-info" class="meal-info">
+                <h2 id="meal-date-display"></h2>
+                <div id="meal-content">
+                    <p class="no-data">날짜를 선택하고 조회 버튼을 눌러주세요.</p>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-message hidden">
+                <p></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
